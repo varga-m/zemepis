@@ -1,0 +1,254 @@
+﻿nazev;typ;kde_lezi;lat;lon
+Albánie;stát;Evropa;41.1;20
+Andorra;stát;Evropa;42.55;1.58
+Belgie;stát;Evropa;50.6;4.6
+Bělorusko;stát;Evropa;53.5;28
+Bosna a Hercegovina;stát;Evropa;44.2;17.8
+Bulharsko;stát;Evropa;42.7;25.3
+Černá Hora;stát;Evropa;42.8;19.2
+Česká republika;stát;Evropa;49.8;15.5
+Dánsko;stát;Evropa;56;9.2
+Estonsko;stát;Evropa;58.7;25.8
+Finsko;stát;Evropa;63;26
+Francie;stát;Evropa;46.6;2.4
+Chorvatsko;stát;Evropa;45.3;15.9
+Irsko;stát;Evropa;53.2;-8
+Island;stát;Evropa;64.9;-18.5
+Itálie;stát;Evropa;42.8;12.5
+Kosovo;stát;Evropa;42.6;20.9
+Lichtenštejnsko;stát;Evropa;47.15;9.55
+Litva;stát;Evropa;55.3;24
+Lotyšsko;stát;Evropa;56.9;25.6
+Lucembursko;stát;Evropa;49.7;6.1
+Maďarsko;stát;Evropa;47.1;19.3
+Malta;stát;Evropa;35.92;14.38
+Moldavsko;stát;Evropa;47.2;28.5
+Monako;stát;Evropa;43.74;7.42
+Německo;stát;Evropa;51.2;10.3
+Nizozemsko;stát;Evropa;52.2;5.6
+Norsko;stát;Evropa;61.5;9.5
+Polsko;stát;Evropa;51.9;19.2
+Portugalsko;stát;Evropa;39.6;-8
+Rakousko;stát;Evropa;47.6;14.3
+Rumunsko;stát;Evropa;46;24.8
+Rusko;stát;Evropa;56.5;40
+Řecko;stát;Evropa;39.6;22
+San Marino;stát;Evropa;43.94;12.46
+Severní Makedonie;stát;Evropa;41.6;21.7
+Slovensko;stát;Evropa;48.7;19.5
+Slovinsko;stát;Evropa;46.1;14.8
+Spojené království;stát;Evropa;53;-1.8
+Srbsko;stát;Evropa;44;20.8
+Španělsko;stát;Evropa;40;-3.6
+Švédsko;stát;Evropa;62.5;15.5
+Švýcarsko;stát;Evropa;46.8;8.2
+Ukrajina;stát;Evropa;49.4;31.5
+Vatikán;stát;Evropa;41.9;12.45
+Cabo da Roca;mys;Portugalsko;38.78;-9.5
+Nordkinn;mys;Norsko;71.13;27.65
+Nordkapp;mys;Norsko;71.17;25.78
+Bílé moře;moře;Rusko;65.5;38
+Barentsovo moře;moře;Rusko, Norsko;72.5;40
+Norské moře;moře;Norsko, Island;68;2
+Severní moře;moře;Spojené království, Norsko, Dánsko, Německo, Nizozemsko, Belgie, Francie;56;3
+Baltské moře;moře;Švédsko, Finsko, Rusko, Estonsko, Lotyšsko, Litva, Polsko, Německo, Dánsko;56;19
+Irské moře;moře;Spojené království, Irsko;53.7;-5.2
+Keltské moře;moře;Irsko, Spojené království, Francie;51;-7.5
+Ligurské moře;moře;Itálie, Francie, Monako;43.6;8.9
+Tyrhénské moře;moře;Itálie, Francie;40;12
+Jónské moře;moře;Itálie, Řecko, Albánie;38;19
+Jaderské moře;moře;Itálie, Slovinsko, Chorvatsko, Bosna a Hercegovina, Černá Hora, Albánie;43;15
+Egejské moře;moře;Řecko, Turecko;39;25
+Marmarské moře;moře;Turecko;40.7;28.2
+Černé moře;moře;Ukrajina, Rusko, Rumunsko, Bulharsko, Turecko;43.5;34
+Azovské moře;moře;Ukrajina, Rusko;46;36.5
+Špicberky;ostrov;Norsko;78.5;17
+Lofoty;ostrov;Norsko;68.2;14
+Vesterály;ostrov;Norsko;68.8;15
+Island;ostrov;Island;64.9;-18.5
+Faerské ostrovy;ostrov;Dánsko;62;-6.9
+Dánské ostrovy (Sjælland, Fyn);ostrov;Dánsko;55.4;11.5
+Hebridy;ostrov;Spojené království;57.5;-7
+Man;ostrov;Spojené království;54.23;-4.55
+Normanské ostrovy;ostrov;Spojené království;49.4;-2.4
+Azory;ostrov;Portugalsko;38.5;-28
+Mallorca (Baleáry);ostrov;Španělsko;39.6;2.9
+Menorca (Baleáry);ostrov;Španělsko;39.95;4.1
+Ibiza (Baleáry);ostrov;Španělsko;38.98;1.43
+Korsika;ostrov;Francie;42.1;9.05
+Sardinie;ostrov;Itálie;40.1;9
+Sicílie;ostrov;Itálie;37.5;14.1
+Liparské ostrovy;ostrov;Itálie;38.5;14.95
+Malta (ostrov);ostrov;Malta;35.88;14.42
+Krk;ostrov;Chorvatsko;45.08;14.6
+Lošinj;ostrov;Chorvatsko;44.55;14.45
+Rab;ostrov;Chorvatsko;44.77;14.76
+Pag;ostrov;Chorvatsko;44.45;15.05
+Brač;ostrov;Chorvatsko;43.32;16.6
+Hvar;ostrov;Chorvatsko;43.15;16.7
+Korčula;ostrov;Chorvatsko;42.95;16.9
+Kerkyra – Korfu;ostrov;Řecko;39.62;19.9
+Sporady;ostrov;Řecko;39.15;23.7
+Kyklady;ostrov;Řecko;37;25.2
+Kréta;ostrov;Řecko;35.24;24.9
+Rhodos;ostrov;Řecko;36.2;28
+Kola;poloostrov;Rusko;67.8;36
+Skandinávský p-ov;poloostrov;Norsko, Švédsko, Finsko;64;15
+Jutský p-ov;poloostrov;Dánsko, Německo;56;9.2
+Normandie;poloostrov;Francie;49.1;-0.4
+Bretaňský p-ov;poloostrov;Francie;48.2;-3
+Pyrenejský (Iberský) p-ov;poloostrov;Španělsko, Portugalsko, Andorra;40;-4
+Apeninský p-ov;poloostrov;Itálie, San Marino, Vatikán;42;13.5
+Balkánský p-ov;poloostrov;Slovinsko, Chorvatsko, Bosna a Hercegovina, Srbsko, Černá Hora, Kosovo, Albánie, Severní Makedonie, Bulharsko, Řecko, Rumunsko, Turecko;42.5;22
+Peloponés;poloostrov;Řecko;37.5;22.2
+Finský záliv;záliv;Finsko, Rusko, Estonsko;59.9;26
+Botnický záliv;záliv;Švédsko, Finsko;62.5;20
+Biskajský záliv;záliv;Francie, Španělsko;45;-4
+Lví záliv (Golfe du Lion);záliv;Francie;43;4
+Boka Kotorska;zátoka;Černá Hora;42.45;18.68
+Sognefjord;fjord;Norsko;61.1;6
+Skagerrak;průliv;Norsko, Dánsko, Švédsko;57.8;9.5
+Kattegat;průliv;Dánsko, Švédsko;56.8;11.5
+Øresund;průliv;Dánsko, Švédsko;55.8;12.7
+La Manche (Channel);průliv;Spojené království, Francie;50.2;-1.5
+Svatojiřský průliv;průliv;Spojené království, Irsko;52;-6
+Gibraltarský průliv;průliv;Španělsko, Spojené království, Maroko;35.95;-5.6
+Bospor;průliv;Turecko;41.1;29.05
+Dardanely;průliv;Turecko;40.2;26.4
+Korintský průplav;průplav;Řecko;37.93;22.99
+Costa Brava;pobřeží;Španělsko;41.85;3.1
+Azurové pobřeží (Côte d'Azur);pobřeží;Francie, Monako;43.55;7
+Riviéra;pobřeží;Itálie;44.2;8.5
+Skandinávské pohoří;pohoří;Norsko, Švédsko;64;13.5
+Galdhøpiggen;vrchol;Norsko;61.64;8.31
+Skotská vysočina – Grampiany;pohoří;Spojené království;56.9;-4
+Ben Nevis;vrchol;Spojené království;56.8;-5
+Francouzské středohoří;pohoří;Francie;45.5;2.9
+Vogézy;pohoří;Francie;48;7
+Ardeny;pohoří;Belgie, Lucembursko, Francie;50.1;5.6
+Schwarzwald;pohoří;Německo;48.3;8.2
+Švábský a Franský Jura;pohoří;Německo;48.9;10.2
+Středoněmecká vysočina;pohoří;Německo;50.7;10.5
+Harz;pohoří;Německo;51.75;10.6
+Šumava – Bayerischer Wald;pohoří;Česká republika, Německo;48.95;13.5
+Sierra Nevada (Mulhacén);vrchol;Španělsko;37.05;-3.31
+Kantaberské pohoří;pohoří;Španělsko;43;-5
+Pyreneje;pohoří;Španělsko, Francie, Andorra;42.75;0.2
+Pico de Aneto;vrchol;Španělsko;42.63;0.66
+Mont Blanc – Monte Bianco;vrchol;Francie, Itálie;45.83;6.87
+Matterhorn;vrchol;Švýcarsko, Itálie;45.98;7.66
+Zugspitze;vrchol;Německo, Rakousko;47.42;10.99
+Dolomity (Marmolada);vrchol;Itálie;46.43;11.85
+Julské Alpy (Triglav);vrchol;Slovinsko;46.38;13.84
+Vysoké Taury (Grossglockner);vrchol;Rakousko;47.08;12.69
+Dachstein;vrchol;Rakousko;47.48;13.61
+Beskydy;pohoří;Česká republika, Polsko, Slovensko;49.5;18.5
+Malá Fatra;pohoří;Slovensko;49.2;19.05
+Veľká Fatra;pohoří;Slovensko;48.95;19.1
+Nízké Tatry (Ďumbier);vrchol;Slovensko;48.94;19.64
+Vysoké Tatry – Gerlachovský štít;vrchol;Slovensko;49.16;20.13
+Lomnický štít;vrchol;Slovensko;49.2;20.21
+Slovenské rudohoří;pohoří;Slovensko;48.7;20
+Slovenský kras;pohoří;Slovensko;48.58;20.6
+Mátra (Kékes);vrchol;Maďarsko;47.87;20.01
+Východní Karpaty;pohoří;Ukrajina, Rumunsko;47.5;25
+Jižní Karpaty;pohoří;Rumunsko;45.5;24.5
+Apeniny (Corno Grande);vrchol;Itálie;42.47;13.57
+Kras;pohoří;Slovinsko, Itálie;45.75;13.85
+Dinárské hory (Dinara);pohoří;Chorvatsko, Bosna a Hercegovina, Černá Hora;44;17
+Rila;pohoří;Bulharsko;42.13;23.5
+Pirin;pohoří;Bulharsko;41.7;23.45
+Rodopy;pohoří;Bulharsko, Řecko;41.6;24.7
+Pindos;pohoří;Řecko, Albánie;39.8;21.2
+Olymp (Mytikas);vrchol;Řecko;40.09;22.36
+Stara Planina;pohoří;Bulharsko, Srbsko;42.75;25
+Pařížská pánev;nížina;Francie;48.6;2.5
+Pomořanská jezerní plošina;nížina;Polsko;53.9;17
+Mazurská jezerní plošina;nížina;Polsko;53.8;21.6
+Finská jezerní plošina;nížina;Finsko;62;26.5
+Karelská jezerní plošina;nížina;Rusko;63.5;33
+Východoevropská rovina;nížina;Rusko, Ukrajina, Bělorusko;54;40
+Severoněmecká nížina;nížina;Německo;52.8;10
+Slezská nížina;nížina;Polsko;51;17
+Velká uherská nížina;nížina;Maďarsko, Srbsko, Rumunsko;47;20.5
+Malá uherská nížina;nížina;Maďarsko, Slovensko, Rakousko;47.8;17.4
+Valašská (Rumunská) nížina;nížina;Rumunsko;44.3;25.5
+Pádská nížina;nížina;Itálie;45.2;10.3
+Etna – Mongibello;sopka;Itálie;37.75;14.99
+Vesuv;sopka;Itálie;40.82;14.43
+Stromboli;sopka;Itálie;38.79;15.21
+Thíra – Santorini;sopka;Řecko;36.4;25.4
+Hekla;sopka;Island;63.98;-19.67
+Hvannadalshnúkur;sopka;Island;64.01;-16.68
+Altamira;jeskyně;Španělsko;43.38;-4.12
+Postojenská jeskyně;jeskyně;Slovinsko;45.78;14.2
+Volha;řeka;Rusko;51.5;46
+Dunaj;řeka;Německo, Rakousko, Slovensko, Maďarsko, Chorvatsko, Srbsko, Bulharsko, Rumunsko, Moldavsko, Ukrajina;47.5;19.05
+Morava;řeka;Česká republika, Slovensko, Rakousko;48.7;17
+Váh;řeka;Slovensko;48.6;17.8
+Tisa;řeka;Ukrajina, Maďarsko, Slovensko, Srbsko, Rumunsko;46.5;20.2
+Dunajec;řeka;Polsko, Slovensko;49.4;20.4
+Iller;řeka;Německo;48;10.1
+Lech;řeka;Rakousko, Německo;48;10.85
+Isar;řeka;Německo, Rakousko;48.4;11.9
+Inn;řeka;Švýcarsko, Rakousko, Německo;47.3;11.4
+Dráva;řeka;Itálie, Rakousko, Slovinsko, Chorvatsko, Maďarsko;46.1;17.5
+Sáva;řeka;Slovinsko, Chorvatsko, Bosna a Hercegovina, Srbsko;45.1;18
+Rýn;řeka;Švýcarsko, Lichtenštejnsko, Rakousko, Německo, Francie, Nizozemsko;50.4;7.6
+Mohan;řeka;Německo;49.95;9.5
+Mosela;řeka;Francie, Lucembursko, Německo;49.6;6.4
+Rýnský vodopád;vodopád;Švýcarsko;47.68;8.62
+Mása (Maas, Meuse);řeka;Francie, Belgie, Nizozemsko;50.46;4.87
+Dněpr;řeka;Rusko, Bělorusko, Ukrajina;49.5;32.5
+Ural;řeka;Rusko, Kazachstán;51;55
+Emba;řeka;Kazachstán;47.5;55
+Tajo – Tejo;řeka;Španělsko, Portugalsko;39.8;-5.5
+Duero – Douro;řeka;Španělsko, Portugalsko;41.4;-6.5
+Ebro;řeka;Španělsko;41.6;-0.9
+Garonne;řeka;Francie;44.8;-0.5
+Loira;řeka;Francie;47.4;0.7
+Seina;řeka;Francie;49;1.8
+Rhôna;řeka;Švýcarsko, Francie;44.5;4.75
+Temže;řeka;Spojené království;51.5;-0.6
+Pád;řeka;Itálie;45.15;9.1
+Tibera;řeka;Itálie;42.4;12.4
+Labe;řeka;Česká republika, Německo;52.9;11.3
+Spréva;řeka;Německo;52;14.2
+Odra;řeka;Česká republika, Polsko, Německo;52.5;14.6
+Lužická Nisa;řeka;Česká republika, Německo, Polsko;51.15;14.98
+Visla;řeka;Polsko;52.2;21
+Ladožské jezero;jezero;Rusko;61;31.5
+Oněžské jezero;jezero;Rusko;61.7;35.5
+Čudské jezero;jezero;Estonsko, Rusko;58.7;27.5
+Saimaa;jezero;Finsko;61.3;28.2
+Inari;jezero;Finsko;69;27.9
+Vänern;jezero;Švédsko;58.9;13.3
+Vättern;jezero;Švédsko;58.3;14.5
+Mälaren;jezero;Švédsko;59.4;17
+Loch Ness;jezero;Spojené království;57.3;-4.45
+IJsselmeer;jezero;Nizozemsko;52.8;5.3
+Ženevské jezero (Lac Léman);jezero;Švýcarsko, Francie;46.45;6.5
+Bodamské jezero;jezero;Německo, Rakousko, Švýcarsko;47.6;9.4
+Lago di Garda;jezero;Itálie;45.65;10.65
+Neziderské jezero;jezero;Rakousko, Maďarsko;47.8;16.75
+Balaton;jezero;Maďarsko;46.85;17.75
+Skadarské jezero;jezero;Černá Hora, Albánie;42.17;19.3
+Ochridské jezero;jezero;Severní Makedonie, Albánie;41;20.73
+Samarská (Kujbyševská) nádrž;nádrž;Rusko;54.5;48.9
+Kamská nádrž;nádrž;Rusko;58.6;56.3
+Kachovská nádrž;nádrž;Ukrajina;47.3;34
+Železná vrata (Đerdap);nádrž;Srbsko, Rumunsko;44.67;22.5
+Gabčíkovo;nádrž;Slovensko;47.88;17.54
+Liptovská Mara;nádrž;Slovensko;49.1;19.5
+Vatnajökull;ledovec;Island;64.4;-16.9
+Jostedalsbreen;ledovec;Norsko;61.7;7
+Aletschgletscher;ledovec;Švýcarsko;46.5;8.03
+NP Bayerischer Wald;národní park;Německo;48.92;13.35
+Bělověžský NP;národní park;Polsko, Bělorusko;52.75;23.85
+TANAP;národní park;Slovensko, Polsko;49.17;20.05
+NP Nízké Tatry;národní park;Slovensko;48.88;19.5
+Plitvická jezera;národní park;Chorvatsko;44.88;15.62
+Gran Paradiso;národní park;Itálie;45.52;7.27
+Lake District;národní park;Spojené království;54.5;-3.1
+Gibraltar;zvláštní území;Spojené království;36.14;-5.35
+Grónsko;zvláštní území;Dánsko;70;-28
