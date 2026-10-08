@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zeměpis Evropy – trénink</title>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<style>
+:root{--sea:#cddfe6;--land:#f6f3e7;--border:#8d927f;--ink:#23323b;--muted:#5e6b72;--panel:#fbfaf5;--line:#d9d5c6;--accent:#2d5ca8;--tgt:#e8890c;--ok:#2e8b57;--okbg:#d8f0e0;--bad:#c0392b;--badbg:#f8dcd8}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font:16px/1.4 "Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--panel)}
+.app{display:grid;grid-template-columns:1fr 360px;height:100%}
+#map{background:var(--sea);position:relative;overflow:hidden}
+svg{width:100%;height:100%;display:block}
+.c{fill:var(--land);stroke:var(--border);stroke-width:.5}
+.d{fill:#6e7a80;stroke:#fff;stroke-width:1}
+.d.tgt{fill:var(--tgt);stroke:var(--ink);stroke-width:2}
+aside{border-left:1px solid var(--line);padding:18px 20px;overflow-y:auto}
+h1{font-size:22px;margin:0 0 4px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 12px}
+select{width:100%;padding:8px;font-size:15px;margin:6px 0 12px}
+.big{width:100%;padding:12px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-size:17px;font-weight:700;cursor:pointer;margin-top:10px}
+.qn{font-size:26px;font-weight:700;margin:6px 0}
+.ans{display:grid;gap:8px;margin-top:12px}
+.ans button{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;background:#fff;font-size:16px;text-align:left;cursor:pointer}
+.ans button b{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;align-items:center;justify-content:center}
+.ans button.ok{background:var(--okbg);border-color:var(--ok)}.ans button.bad{background:var(--badbg);border-color:var(--bad)}
+.fb{margin-top:12px;font-size:15px}
+.hidden{display:none}
+#load{margin-top:12px;padding:10px;background:#fff3cd;border-radius:8px;font-size:14px}
+footer{margin-top:24px;font-size:12px;color:var(--muted)}
+@media (max-width:800px){.app{grid-template-columns:1fr;grid-template-rows:50vh auto}}
+</style>
+</head>
+<body>
+<div class="app">
+ <div id="map"><svg id="svg"></svg></div>
+ <aside>
+  <h1>Zeměpis Evropy</h1>
+  <p class="sub">Kvíz: na mapě bliká místo – vyber A, B nebo C.</p>
+  <div id="load" class="hidden">Data se nenačetla automaticky (soubor je otevřený přímo z disku). Vyber soubor <b>realie.csv</b>:<br><input type="file" id="file" accept=".csv"></div>
+  <div id="setup" class="hidden">
+   <label>Druh míst</label>
+   <select id="typ"></select>
+   <label>Počet otázek</label>
+   <select id="pocet"><option value="10">10</option><option value="20">20</option><option value="0">Všechny</option></select>
+   <button class="big" id="go">Začít</button>
+  </div>
+  <div id="game" class="hidden">
+   <div class="sub" id="stav"></div>
+   <div class="qn" id="otazka">?</div>
+   <div class="ans" id="ans"></div>
+   <div class="fb" id="fb"></div>
+   <button class="big hidden" id="dalsi">Další ›</button>
+  </div>
+  <footer>Verze 2 · data: realie.csv</footer>
+ </aside>
+</div>
+<script>
+let DATA=[],game=null;
+const svg=d3.select("#svg"),g=svg.append("g"),gd=svg.append("g");
+const proj=d3.geoAzimuthalEqualArea().rotate([-15,-53]),path=d3.geoPath(proj);
+
+// 1) mapa podkladu
+d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json").then(w=>{
+ const f=topojson.feature(w,w.objects.countries);
+ const r=document.getElementById("map").getBoundingClientRect();
+ proj.fitExtent([[10,10],[r.width-10,r.height-10]],{type:"MultiPoint",coordinates:[[-25,36],[45,36],[50,64],[-15,67],[25,71]]});
+ g.selectAll("path").data(f.features).join("path").attr("class","c").attr("d",path);
+ nacistData();
+});
+
+// 2) data z realie.csv (oddělovač středník)
+function zpracuj(text){
+ DATA=d3.dsvFormat(";").parse(text.replace(/^﻿/,""),r=>({nazev:r.nazev,typ:r.typ,kde:r.kde_lezi,lat:+r.lat,lon:+r.lon})).filter(r=>r.lat);
+ const typy=[...new Set(DATA.map(r=>r.typ))].sort((a,b)=>a.localeCompare(b,"cs"));
+ document.getElementById("typ").innerHTML=`<option value="">Vše (${DATA.length})</option>`+typy.map(t=>`<option>${t}</option>`).join("");
+ document.getElementById("load").classList.add("hidden");
+ document.getElementById("setup").classList.remove("hidden");
+}
+function nacistData(){
+ fetch("realie.csv").then(r=>{if(!r.ok)throw 0;return r.text()}).then(zpracuj)
+  .catch(()=>document.getElementById("load").classList.remove("hidden"));
+}
+document.getElementById("file").onchange=e=>{const f=e.target.files[0];if(f)f.text().then(zpracuj);};
+
+// 3) kvíz A/B/C
+const mix=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+document.getElementById("go").onclick=()=>{
+ const t=document.getElementById("typ").value;
+ const pool=DATA.filter(r=>!t||r.typ==t);
+ const n=+document.getElementById("pocet").value;
+ game={pool,otazky:n?mix([...pool]).slice(0,n):mix([...pool]),i:0,ok:0};
+ document.getElementById("setup").classList.add("hidden");
+ document.getElementById("game").classList.remove("hidden");
+ polozOtazku();
+};
+function polozOtazku(){
+ const q=game.otazky[game.i];game.hotovo=false;
+ document.getElementById("stav").textContent=`Otázka ${game.i+1} / ${game.otazky.length} · správně ${game.ok}`;
+ document.getElementById("otazka").textContent="Co je to za místo?";
+ document.getElementById("fb").textContent="";
+ document.getElementById("dalsi").classList.add("hidden");
+ const [x,y]=proj([q.lon,q.lat]);
+ gd.selectAll("*").remove();
+ gd.append("circle").attr("class","d tgt").attr("cx",x).attr("cy",y).attr("r",8);
+ const jine=game.pool.filter(r=>r!==q).sort((a,b)=>Math.hypot(a.lat-q.lat,a.lon-q.lon)-Math.hypot(b.lat-q.lat,b.lon-q.lon));
+ const moznosti=mix([q,...mix(jine.slice(0,6)).slice(0,2)]);
+ const A=document.getElementById("ans");A.innerHTML="";
+ moznosti.forEach((m,k)=>{const b=document.createElement("button");b.innerHTML=`<b>${"ABC"[k]}</b>${m.nazev}`;b.onclick=()=>odpoved(m,b,q);b._m=m;A.appendChild(b);});
+}
+function odpoved(m,b,q){
+ if(game.hotovo)return;game.hotovo=true;
+ const dobre=m===q;if(dobre)game.ok++;
+ [...document.getElementById("ans").children].forEach(x=>{if(x._m===q)x.classList.add("ok");else if(x===b)x.classList.add("bad")});
+ document.getElementById("otazka").textContent=q.nazev;
+ document.getElementById("fb").textContent=(dobre?"✓ Správně! ":"✗ Je to "+q.nazev+". ")+`(${q.typ} – ${q.kde})`;
+ const d=document.getElementById("dalsi");d.textContent=game.i+1<game.otazky.length?"Další ›":"Výsledek ›";d.classList.remove("hidden");
+}
+document.getElementById("dalsi").onclick=()=>{
+ game.i++;
+ if(game.i<game.otazky.length)return polozOtazku();
+ document.getElementById("otazka").textContent=`${game.ok} z ${game.otazky.length} správně`;
+ document.getElementById("ans").innerHTML="";document.getElementById("fb").textContent="";
+ const d=document.getElementById("dalsi");d.textContent="Znovu";d.onclick=()=>location.reload();
+};
+document.addEventListener("keydown",e=>{const k="abc".indexOf(e.key.toLowerCase());if(game&&!game.hotovo&&k>=0){const b=document.getElementById("ans").children[k];if(b)b.click();}if(e.key=="Enter"&&game&&game.hotovo)document.getElementById("dalsi").click();});
+</script>
+</body>
+</html>
